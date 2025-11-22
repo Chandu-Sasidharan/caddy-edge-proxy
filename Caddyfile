@@ -1,0 +1,25 @@
+https://biobaumbauer.de {
+    @api path /api/* /admin /admin/*
+    handle @api {
+        reverse_proxy backend-prod:4000 {
+            header_up X-Forwarded-Proto {scheme}
+        }
+    }
+    handle {
+        reverse_proxy frontend-prod:80
+    }
+}
+
+https://staging.biobaumbauer.de {
+    @api path /api/* /admin /admin/*
+    handle @api {
+        reverse_proxy backend-staging:4000 {
+            header_up X-Forwarded-Proto {scheme}
+        }
+    }
+    handle {
+        reverse_proxy frontend-staging:80
+    }
+}
+
+
