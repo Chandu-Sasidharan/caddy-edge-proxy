@@ -1,0 +1,26 @@
+name: Deploy Caddy Edge Proxy
+
+on:
+    push:
+        branches: [main]
+    workflow_dispatch:
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: SSH deploy
+              uses: appleboy/ssh-action@v1
+              with:
+                  host: ${{ secrets.DROPLET_HOST }}
+                  username: ${{ secrets.DROPLET_USER }}
+                  key: ${{ secrets.DROPLET_SSH_KEY }}
+                  script: |
+                      cd /opt/caddy-edge-proxy
+                      git pull origin main
+                      docker network create edge_net || true
+                      docker compose pull
+                      docker compose up -d
+                      docker image prune -f
