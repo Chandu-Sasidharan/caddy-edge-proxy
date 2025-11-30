@@ -1,5 +1,5 @@
 https://www.biobaumbauer.de {
-  redir https://biobaumbauer.de{uri} permanent
+	redir https://biobaumbauer.de{uri} permanent
 }
 
 https://biobaumbauer.de {
