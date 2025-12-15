@@ -1,6 +1,6 @@
 # Caddy Edge Proxy
 
-Edge reverse proxy for projects hosted on the DigitalOcean droplet. Currently serves biobaumbauer prod and staging; more projects can be added by extending the Caddyfile.
+Edge reverse proxy for projects hosted on the DigitalOcean droplet. Currently serves biobaumbauer (prod + staging) and kakapo (prod); more projects can be added by extending the Caddyfile.
 
 ## What’s here
 
@@ -10,6 +10,7 @@ Edge reverse proxy for projects hosted on the DigitalOcean droplet. Currently se
 -   Caddyfile routing:
     -   https://biobaumbauer.de → `frontend-prod:80` and `backend-prod:4000` (`/api/*`, `/admin*`).
     -   https://staging.biobaumbauer.de → `frontend-staging:80` and `backend-staging:4000` (`/api/*`, `/admin*`).
+    -   https://kakapo.bot → `kakapo-prod:80`.
 
 ## Prerequisites
 

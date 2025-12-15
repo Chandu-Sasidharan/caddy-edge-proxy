@@ -23,3 +23,11 @@ https://staging.biobaumbauer.de {
 		reverse_proxy frontend-staging:80
 	}
 }
+
+https://www.kakapo.bot {
+	redir https://kakapo.bot{uri} permanent
+}
+
+https://kakapo.bot {
+	reverse_proxy kakapo-prod:80
+}
