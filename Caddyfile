@@ -29,5 +29,5 @@ https://www.kakapo.bot {
 }
 
 https://kakapo.bot {
-	reverse_proxy kakapo-prod:80
+	reverse_proxy kakapo-prod:3000
 }
