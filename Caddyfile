@@ -1,3 +1,7 @@
+https://www.mindfulltechnologies.com {
+	redir https://mindfulltechnologies.com{uri} permanent
+}
+
 https://mindfulltechnologies.com {
 	reverse_proxy mindfull-home:3002
 }
