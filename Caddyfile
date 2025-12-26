@@ -1,3 +1,23 @@
+https://mindfulltechnologies.com {
+	reverse_proxy mindfull-home:3002
+}
+
+https://www.kakapo.bot {
+	redir https://kakapo.bot{uri} permanent
+}
+
+https://kakapo.bot {
+	reverse_proxy kakapo-landing-page:3001
+}
+
+https://www.chat.kakapo.bot {
+	redir https://chat.kakapo.bot{uri} permanent
+}
+
+https://chat.kakapo.bot {
+	reverse_proxy kakapo-prod:3000
+}
+
 https://www.biobaumbauer.de {
 	redir https://biobaumbauer.de{uri} permanent
 }
@@ -22,20 +42,4 @@ https://staging.biobaumbauer.de {
 	handle {
 		reverse_proxy frontend-staging:80
 	}
-}
-
-https://www.kakapo.bot {
-	redir https://kakapo.bot{uri} permanent
-}
-
-https://kakapo.bot {
-	reverse_proxy kakapo-landing-page:3001
-}
-
-https://www.chat.kakapo.bot {
-	redir https://chat.kakapo.bot{uri} permanent
-}
-
-https://chat.kakapo.bot {
-	reverse_proxy kakapo-prod:3000
 }
