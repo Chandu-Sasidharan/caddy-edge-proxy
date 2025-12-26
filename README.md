@@ -8,9 +8,13 @@ Edge reverse proxy for projects hosted on the DigitalOcean droplet. Currently se
 -   Automatic TLS via ACME; certs/config persisted in Docker volumes.
 -   External Docker network `edge_net` expected; backend/frontends join this network to be reachable.
 -   Caddyfile routing:
+    -   https://www.biobaumbauer.de → redirects to https://biobaumbauer.de (permanent).
     -   https://biobaumbauer.de → `frontend-prod:80` and `backend-prod:4000` (`/api/*`, `/admin*`).
     -   https://staging.biobaumbauer.de → `frontend-staging:80` and `backend-staging:4000` (`/api/*`, `/admin*`).
-    -   https://kakapo.bot → `kakapo-prod:80`.
+    -   https://www.kakapo.bot → redirects to https://kakapo.bot (permanent).
+    -   https://kakapo.bot → `kakapo-landing-page:3001`.
+    -   https://www.chat.kakapo.bot → redirects to https://chat.kakapo.bot (permanent).
+    -   https://chat.kakapo.bot → `kakapo-prod:3000`.
 
 ## Prerequisites
 

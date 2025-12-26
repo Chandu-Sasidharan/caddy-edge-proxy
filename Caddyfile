@@ -24,6 +24,14 @@ https://staging.biobaumbauer.de {
 	}
 }
 
+https://www.kakapo.bot {
+	redir https://kakapo.bot{uri} permanent
+}
+
+https://kakapo.bot {
+	reverse_proxy kakapo-landing-page:3001
+}
+
 https://www.chat.kakapo.bot {
 	redir https://chat.kakapo.bot{uri} permanent
 }
