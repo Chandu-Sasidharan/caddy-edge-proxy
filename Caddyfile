@@ -3,7 +3,7 @@ https://www.mindfulltechnologies.com {
 }
 
 https://mindfulltechnologies.com {
-	reverse_proxy mindfull-home:3002
+	reverse_proxy mindfull-home:3000
 }
 
 https://www.kakapo.bot {
@@ -11,7 +11,7 @@ https://www.kakapo.bot {
 }
 
 https://kakapo.bot {
-	reverse_proxy kakapo-landing-page:3001
+	reverse_proxy kakapo-landing-page:3000
 }
 
 https://www.chat.kakapo.bot {
@@ -33,7 +33,7 @@ https://biobaumbauer.de {
 	}
 
 	handle {
-		reverse_proxy frontend-prod:80
+		reverse_proxy frontend-prod:3000
 	}
 }
 
@@ -44,6 +44,6 @@ https://staging.biobaumbauer.de {
 	}
 
 	handle {
-		reverse_proxy frontend-staging:80
+		reverse_proxy frontend-staging:3000
 	}
 }
