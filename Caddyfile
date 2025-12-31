@@ -3,7 +3,7 @@ https://www.chandu-sasidharan.de {
 }
 
 https://chandu-sasidharan.de {
-	reverse_proxy my-profile:3000
+	reverse_proxy my-profile:80
 }
 
 
