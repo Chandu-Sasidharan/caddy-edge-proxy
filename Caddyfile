@@ -38,21 +38,21 @@ https://www.biobaumbauer.de {
 https://biobaumbauer.de {
 	@api path /api/* /admin /admin/*
 	handle @api {
-		reverse_proxy backend-prod:4000
+		reverse_proxy bbb-backend-prod:4000
 	}
 
 	handle {
-		reverse_proxy frontend-prod:3000
+		reverse_proxy bbb-frontend-prod:3000
 	}
 }
 
 https://staging.biobaumbauer.de {
 	@api path /api/* /admin /admin/*
 	handle @api {
-		reverse_proxy backend-staging:4000
+		reverse_proxy bbb-backend-staging:4000
 	}
 
 	handle {
-		reverse_proxy frontend-staging:3000
+		reverse_proxy bbb-frontend-staging:3000
 	}
 }
