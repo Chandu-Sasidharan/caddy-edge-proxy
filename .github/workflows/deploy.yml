@@ -23,6 +23,8 @@ jobs:
                       git reset --hard origin/main
                       git clean -fd
                       docker network create edge_net || true
+                      docker container prune -f || true
+                      docker image prune -af || true
+                      docker builder prune -af || true
                       docker compose pull
                       docker compose up -d --force-recreate caddy-edge
-                      docker image prune -f

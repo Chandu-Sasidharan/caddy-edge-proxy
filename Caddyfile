@@ -49,10 +49,10 @@ https://biobaumbauer.de {
 https://staging.biobaumbauer.de {
 	@api path /api/* /admin /admin/*
 	handle @api {
-		reverse_proxy bbb-backend-staging:4000
+		reverse_proxy bbb-backend-stage:4000
 	}
 
 	handle {
-		reverse_proxy bbb-frontend-staging:3000
+		reverse_proxy bbb-frontend-stage:3000
 	}
 }
