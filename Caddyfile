@@ -15,19 +15,19 @@ https://mindfulltechnologies.com {
 	reverse_proxy mindfull-home:3000
 }
 
-https://www.kakapo.bot {
-	redir https://kakapo.bot{uri} permanent
+https://www.kakapo.chat {
+	redir https://kakapo.chat{uri} permanent
 }
 
-https://kakapo.bot {
+https://kakapo.chat {
 	reverse_proxy kakapo-landing-page:3000
 }
 
-https://www.chat.kakapo.bot {
-	redir https://chat.kakapo.bot{uri} permanent
+https://www.app.kakapo.chat {
+	redir https://app.kakapo.chat{uri} permanent
 }
 
-https://chat.kakapo.bot {
+https://app.kakapo.chat {
 	reverse_proxy kakapo-prod:3000
 }
 
