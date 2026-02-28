@@ -56,3 +56,30 @@ https://staging.biobaumbauer.de {
 		reverse_proxy bbb-frontend-stage:3000
 	}
 }
+
+https://www.sanchari.co {
+	redir https://sanchari.co{uri} permanent
+}
+
+https://sanchari.co {
+	@api path /api/* /admin /admin/*
+	handle @api {
+		reverse_proxy sanchari-backend-prod:4000
+	}
+
+	handle {
+		reverse_proxy sanchari-frontend-prod:3000
+	}
+}
+
+https://stage.sanchari.co {
+	@api path /api/* /admin /admin/*
+	handle @api {
+		reverse_proxy sanchari-backend-stage:4000
+	}
+
+	handle {
+		reverse_proxy sanchari-frontend-stage:3000
+	}
+}
+
